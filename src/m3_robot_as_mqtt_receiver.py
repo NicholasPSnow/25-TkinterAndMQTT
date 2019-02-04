@@ -16,7 +16,7 @@ class DelegateThatReceives(object):
         print("Backward",leftspeed,rightspeed)
         drive_system = DriveSystem()
         drive_system.go(-leftspeed, -rightspeed)
-        
+
     def Arm_Up(self):
         print("Arm Up")
     def Arm_Down(self):
