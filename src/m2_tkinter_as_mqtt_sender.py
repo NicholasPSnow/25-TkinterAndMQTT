@@ -85,7 +85,7 @@ def main():
 
     left_button = ttk.Button(main_frame, text="Left")
     left_button.grid(row=3, column=1)
-    left_button['command'] = lambda: print("Left button")
+    left_button['command'] = lambda: mqtt_client.send_message("Left")
     root.bind('<Left>', lambda event: print("Left key"))
 
     stop_button = ttk.Button(main_frame, text="Stop")
@@ -95,7 +95,7 @@ def main():
 
     right_button = ttk.Button(main_frame, text="Right")
     right_button.grid(row=3, column=3)
-    right_button['command'] = lambda: print("Right button")
+    right_button['command'] = lambda: mqtt_client.send_message("Right")
     root.bind('<Right>', lambda event: print("Right key"))
 
     back_button = ttk.Button(main_frame, text="Back")
